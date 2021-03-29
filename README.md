@@ -50,5 +50,7 @@ The Random Forest model far outperformed the other approaches on the test and va
 *	**AdaBoostClassifier**: AUROC = 0.69 
 
 ## Productionization 
-In this step, I built a web App, which takes in the six vitals of a patient and returns a sepsis prediction. 
+In this step, I built a web App, which takes in the six vitals of a patient and returns a sepsis prediction:
+
+https://earlydetectionapp.herokuapp.com/
 
