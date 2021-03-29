@@ -54,3 +54,4 @@ In this step, I built a web App, which takes in the six vitals of a patient and 
 
 https://earlydetectionapp.herokuapp.com/
 
+![alt text](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "App")
