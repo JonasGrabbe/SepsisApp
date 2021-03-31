@@ -1,6 +1,6 @@
 # Sepsis early detection: Project Overview 
 * Created a tool that predicts Sepsis six hours befor onset with six vital signs.
-* The data otained is a 40.336 patient strong dataset from the Beth Israel Deaconess Medical Center and Emory University Hospital, collected from 2001 and 20012.
+* The data obtained is a 40.336 patient strong dataset from the Beth Israel Deaconess Medical Center and Emory University Hospital, collected from 2001 and 20012.
 * Using the six most common ED vital signs (Heart rate, O2Sat, Temperature, Systolic BP, MAP, and Respiration rate) as features.
 * Ada Boost, Gradient Boosting, Linear Regression, and Random Forest Regressors using GridsearchCV to reach the best model. 
 * Built a patient facing Web APP using Streamlit. 
