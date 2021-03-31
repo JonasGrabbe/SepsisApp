@@ -38,20 +38,36 @@ I tried  different models and evaluated them using the area under the receiver o
 InSight was trained on different Datasets and more Freatures, the common risk indicator all take other fearutes into account, the best inditicator to compare our model is to qSOFA.
 
 I tried six different models:
-*	**Multiple Linear Regression**, **Gaussian Naive Bayes**  – Baseline for the model
-*	**Decision Tree**, **Random Forest** 
-*	**Ada Boost**, **Gradient Boosting** 
-
+*	**Multiple Linear Regression**, **Gaussian Naive Bayes**,	**Decision Tree** – Baseline for the model 
+*	**Random Forest** **Ada Boost**, **Gradient Boosting** - Good collection of models to train this data on
+*	**XGBoost** -- Is an exceptionally useful machine learning method when you don't want to sacrifice the ability to correctly classify observations but you still want a model that is fairly easy to understand and interpret.
 
 ## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets. 
-*	**Random Forest** : AUROC = 0.72 
+The Random Forest model and XGBoost outperformed the other approaches on the test and validation sets. 
+* **XGBoost**: AUROC = 0.72
+*	**Random Forest**: AUROC = 0.72 
 *	**GradientBoostingClassifiern**: AUROC = 0.69 
 *	**AdaBoostClassifier**: AUROC = 0.69 
+
+## XGBoost 
+We use the XGBoost model since it is more senible to the sepsis positiv patients.
+
+### Optimize Parameters using Cross Validation and GridSearch()
+
+**XGBoost** has a lot of *hyperparameters*, parameters that we have to manually configure and are not determined by **XGBoost** itself, including `max_depth`, the maximum tree depth, `learning_rate`, the learning rate, or "eta", `gamma`, the parameter that encourages pruning, and `reg_lambda`, the regularization parameter lambda. 
+##### Result:
+* `gamma=0`
+* `learn_rate=0.1`
+* `max_depth=8`
+* `scale_pos_weight=60`
+* `reg_lambda=10`
+
 
 ## Productionization 
 In this step, I built a web App, which takes in the six vitals of a patient and returns a sepsis prediction:
 
 https://earlydetectionapp.herokuapp.com/
 
-![alt text](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "App")
+
+![Logo](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "LogoApp")
+![App](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "App")
