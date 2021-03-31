@@ -44,10 +44,10 @@ I tried six different models:
 
 ## Model performance
 The Random Forest model and XGBoost outperformed the other approaches on the test and validation sets. 
-* **XGBoost**: AUROC = 0.72
-*	**Random Forest**: AUROC = 0.72 
-*	**GradientBoostingClassifiern**: AUROC = 0.69 
-*	**AdaBoostClassifier**: AUROC = 0.69 
+* **XGBoost**: `AUROC = 0.72`
+*	**Random Forest**: `AUROC = 0.72` 
+*	**GradientBoostingClassifiern**: `AUROC = 0.69` 
+*	**AdaBoostClassifier**: `AUROC = 0.69`
 
 ## XGBoost 
 We use the XGBoost model since it is more senible to the sepsis positiv patients.
