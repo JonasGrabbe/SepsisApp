@@ -26,9 +26,9 @@ Data cleaning:
 ## EDA
 I looked at the distributions of the data and the value counts for the six variables. Below are a few highlights. 
 
-![alt text](https://github.com/JonasGrabbe/SepsisApp/blob/main/heatmap.png "Heatmap")
-![alt text](https://github.com/JonasGrabbe/SepsisApp/blob/main/missingValues.png "Missing Values in percentage")
-![alt text](https://github.com/JonasGrabbe/SepsisApp/blob/main/patient1216.png "Patient 1216")
+![Heatmap](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/heatmap.png "Heatmap")
+![Missing values](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/missingValues.png "Missing Values in percentage")
+![Patient 1216](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/patient1216.png "Patient 1216")
 
 ## Model Building 
 
@@ -55,13 +55,22 @@ We use the XGBoost model since it is more senible to the sepsis positiv patients
 ### Optimize Parameters using Cross Validation and GridSearch()
 
 **XGBoost** has a lot of *hyperparameters*, parameters that we have to manually configure and are not determined by **XGBoost** itself, including `max_depth`, the maximum tree depth, `learning_rate`, the learning rate, or "eta", `gamma`, the parameter that encourages pruning, and `reg_lambda`, the regularization parameter lambda. 
-##### Result:
+##### Result:con
 * `gamma=0`
 * `learn_rate=0.1`
 * `max_depth=8`
 * `scale_pos_weight=60`
 * `reg_lambda=10`
 
+#### Confusion matrix:
+![Confusion Matrix](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/descarga.png "Confusion matrix")
+#### First XGBoost Tree:
+`weight:  {'HR': 25, 'Resp': 19, 'O2Sat': 17}
+gain:  {'HR': 2722.8444263319993, 'Resp': 2403.9058481052634, 'O2Sat': 665.0437755764705}
+cover:  {'HR': 49814.29, 'Resp': 66938.6447368421, 'O2Sat': 42674.92647058824}
+total_gain:  {'HR': 68071.11065829998, 'Resp': 45674.211114000005, 'O2Sat': 11305.744184799998}
+total_cover:  {'HR': 1245357.25, 'Resp': 1271834.25, 'O2Sat': 725473.75}`
+![Tree](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/tree.png "Tree")
 
 ## Productionization 
 In this step, I built a web App, which takes in the six vitals of a patient and returns a sepsis prediction:
@@ -69,5 +78,5 @@ In this step, I built a web App, which takes in the six vitals of a patient and 
 https://earlydetectionapp.herokuapp.com/
 
 
-![Logo](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "LogoApp")
-![App](https://github.com/JonasGrabbe/SepsisApp/blob/main/detectionapp.png "App")
+![Logo](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/titleApp.png "LogoApp")
+![App](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/sepsisAppSS.png "App")
