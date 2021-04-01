@@ -27,7 +27,7 @@ Data cleaning:
 I looked at the distributions of the data and the value counts for the six variables. Below are a few highlights. 
 
 ![Heatmap](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/heatmap.png "Heatmap")
-![Feature importance](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/featuresRF.png "Feature importance")
+![Missing values](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/missingValues.png "Missing Values")
 ![Patient 1216](https://github.com/JonasGrabbe/SepsisApp/blob/main/images/patient1216.png "Patient 1216")
 
 ## Model Building 
